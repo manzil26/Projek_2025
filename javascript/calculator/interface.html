@@ -12,43 +12,92 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
             crossorigin="anonymous"></script>
-
         <script src="logic.js"></script>
     </head>
     <body>
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-sm-6">
-                    <form name="calculator">
-                        <input type="text" name="display"
-                            class="form-control mb-2" readonly>
 
-                        <input type="button" value="1" onclick="inputNumber(1)">
-                        <input type="button" value="2" onclick="inputNumber(2)">
-                        <input type="button" value="3" onclick="inputNumber(3)">
-                        <input type="button" value="4" onclick="inputNumber(4)">
-                        <input type="button" value="5" onclick="inputNumber(5)">
-                        <input type="button" value="6" onclick="inputNumber(6)">
-                        <input type="button" value="7" onclick="inputNumber(7)">
-                        <input type="button" value="8" onclick="inputNumber(8)">
-                        <input type="button" value="9" onclick="inputNumber(9)">
-                        <input type="button" value="0" onclick="inputNumber(0)">
+        <div class="container mt-5 d-flex justify-content-center">
+            <div class="card p-3"
+                style="width: 400px; background-color: #f7f7d6;">
+                <form name="calculator">
+                    <input type="text" name="display" readonly
+                        class="form-control mb-3"
+                        style="background-color: #f7e7cc; color: black; height: 70px;">
 
-                        <input type="button" value="+"
-                            onclick="inputNumber('+')">
-                        <input type="button" value="-"
-                            onclick="inputNumber('-')">
-                        <input type="button" value="*"
-                            onclick="inputNumber('*')">
-                        <input type="button" value="/"
-                            onclick="inputNumber('/')">
+                    <div class="d-flex flex-wrap">
+                        <!-- Number buttons -->
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(1)">1</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(2)">2</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(3)">3</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(4)">4</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(5)">5</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(6)">6</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(7)">7</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(8)">8</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(9)">9</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber(0)">0</button>
 
-                        <input type="button" value="clr"
-                            onclick="clearDisplay()">
-                        <input type="button" value="=" onclick="calculate()">
-                    </form>
-                </div>
+                        <!-- Operators -->
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber('+')">+</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber('-')">-</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber('*')">*</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="inputNumber('/')">/</button>
+
+                        <!-- Clear & Calculate -->
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="clearDisplay()">clr</button>
+                        <button type="button"
+                            class="btn btn-light m-1 font-weight-bold"
+                            style="background: #eec69a; width: 50px; height: 50px;"
+                            onclick="calculate()">=</button>
+                    </div>
+                </form>
             </div>
         </div>
+
     </body>
 </html>
